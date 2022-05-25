@@ -80,7 +80,7 @@ export default {
     textPlayceholder: {
       type: String,
       default: "",
-    },
+    }
   },
 
   data() {

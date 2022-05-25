@@ -28,7 +28,7 @@ export default {
     return {
       massLinks: [
         { textLink: "Учетная запись", LinkPath: "/Account" },
-        { textLink: "Товары", LinkPath: "/Account" },
+        { textLink: "Товары", LinkPath: "/SiteProducts" },
         { textLink: "Материалы", LinkPath: "/Account" },
         { textLink: "Поддержка", LinkPath: "/Account" },
       ],

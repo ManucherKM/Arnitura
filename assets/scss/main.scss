@@ -258,12 +258,14 @@ li {
 
 .about {
     margin-bottom: 127px;
+
     &__title {
         padding-top: 44px;
         font-size: 30px;
         text-transform: none;
         margin-bottom: 51px;
     }
+
     &__logo {
         margin-bottom: 17px;
     }
@@ -282,14 +284,17 @@ li {
             flex-direction: column;
             align-items: center;
         }
+
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+
     &__text {
         max-width: 587px;
         text-align: center;
+
         &:not(&:last-child) {
             margin-bottom: 5px;
         }
@@ -300,6 +305,7 @@ li {
     &__hr {
         border: 4px solid #4094d0;
     }
+
     &-content {
         padding: 35px 160px;
         display: flex;
@@ -336,14 +342,17 @@ li {
         text-align: center;
         width: 50%;
     }
+
     .wrapper-res__title {
         font-size: 34px;
         text-transform: none;
         margin-bottom: 44px;
     }
+
     .wrapper-res__text {
         margin-bottom: 23px;
     }
+
     .wrapper-res__input {
         width: 80%;
         margin: 0 auto;
@@ -353,41 +362,48 @@ li {
         color: #83868b;
         border-radius: 5px;
         margin-bottom: 38px;
+
         &[type="email"] {
             padding-left: 12px;
         }
+
         outline: none;
     }
 
     .wrapper-res__inputs {
         margin-bottom: 38px;
+
         .mt {
             margin-top: 10px;
         }
     }
 }
+
 .wrapper-res__btn {
     font-size: 16px;
     padding: 15px 35px;
     font-weight: 700;
     letter-spacing: 0.05em;
 }
+
 .wrapper-input {
     width: 80%;
     text-align: left;
     margin: 0 auto;
     position: relative;
+
     .wrapper-input__text {
         color: #83868b;
         font-size: 16px;
         text-align: left;
         white-space: nowrap;
     }
+
     .wrapper-input__input {
         position: relative;
         width: 100%;
         font-size: 14px;
-        color: #83868b;
+        color: #000;
         outline: none;
         border: 1px solid #ccc;
         padding: 8px 0;
@@ -398,11 +414,14 @@ li {
             padding-left: 12px;
         }
     }
+
     .wrapper-input__block-eye {
         position: relative;
+
         .wrapper-input__eye-click {
             position: relative;
         }
+
         .wrapper__eye {
             position: absolute;
             top: 50%;
@@ -414,91 +433,107 @@ li {
         }
     }
 }
+
+.wrapper-account__inputs {
+    .wrapper-account__info {
+        .wrapper-input__input {
+            font-size: 11px;
+        }
+    }
+}
+
 .wrapper-sing-up {
     height: 80vh;
 }
+
 .wrapper-sing-in {
     height: 80vh;
 
-    .checkbox {
-        width: 80%;
-        text-align: left;
-        margin: 0 auto 16px auto;
-    }
-
-    /* для элемента input c type="checkbox" */
-    .custom-checkbox > input {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    /* для элемента label, связанного с .custom-checkbox */
-    .custom-checkbox > span {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        color: #83868b;
-    }
-
-    /* создание в label псевдоэлемента before со следующими стилями */
-    .custom-checkbox > span::before {
-        content: "";
-        display: inline-block;
-        width: 1.3em;
-        height: 1.3em;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 1px solid #adb5bd;
-        border-radius: 0.25em;
-        margin-right: 0.5em;
-        background-repeat: no-repeat;
-        background-position: 55% 50%;
-        background-size: 50% 50%;
-    }
-
-    /* стили при наведении курсора на checkbox */
-    .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
-        border-color: #b3d7ff;
-    }
-
-    /* стили для активного чекбокса (при нажатии на него) */
-    .custom-checkbox > input:not(:disabled):active + span::before {
-        background-color: #b3d7ff;
-        border-color: #b3d7ff;
-    }
-
-    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-    .custom-checkbox > input:focus:not(:checked) + span::before {
-        border-color: #80bdff;
-    }
-
-    /* стили для чекбокса, находящегося в состоянии checked */
-    .custom-checkbox > input:checked + span::before {
-        border-color: #4094d0;
-        background-color: #4094d0;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-    }
-
-    /* стили для чекбокса, находящегося в состоянии disabled */
-    .custom-checkbox > input:disabled + span::before {
-        background-color: #e9ecef;
-    }
     .wrapper__link {
         width: 80%;
         margin: 29px auto 0 auto;
         text-align: left;
     }
+
     .wrapper-sing-in__link {
         color: #4094d0;
         font-weight: 700;
     }
 }
 
+//Checkbox
+
+.checkbox {
+    width: 80%;
+    text-align: left;
+    margin: 0 auto 16px auto;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    color: #83868b;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+    content: "";
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #b3d7ff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: #4094d0;
+    background-color: #4094d0;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
+
+
 .wrapper-sing-in__btns {
     display: flex;
     width: 80%;
     margin: 0 auto;
+
     .btn-one {
         width: 45%;
         margin-right: 5%;
@@ -506,6 +541,7 @@ li {
         background: #4094d0;
         color: #fff;
     }
+
     .link-btn {
         width: 50%;
         text-transform: uppercase;
@@ -521,6 +557,7 @@ li {
 .border-red {
     border-color: red;
 }
+
 .color-red {
     color: red;
 }
@@ -529,6 +566,7 @@ li {
     font-size: 14px;
     margin: 5px 0;
 }
+
 .mt {
     margin-top: 0;
 }
@@ -538,18 +576,22 @@ li {
     display: flex;
     justify-content: space-between;
     margin-top: 77px;
+
     .wrapper-contents__navigatiov {
         display: flex;
         flex-direction: column;
         width: 15%;
         height: 90vh;
+
         .btn-link {
             margin-bottom: 10px;
         }
+
         .btn-link:last-child {
             margin-bottom: 0;
         }
     }
+
     .wrapper-contents__components {
         width: 80%;
         height: 90vh;
@@ -567,11 +609,13 @@ li {
     border-radius: 0.2em;
     transition: all 300ms;
 }
+
 .btn-link:hover {
     transition: all 300ms;
     background: #4094d0;
     color: #fff;
 }
+
 .btn-link:focus {
     background: #4094d0;
     color: #fff;
@@ -582,51 +626,59 @@ li {
         padding-bottom: 30px;
         border-bottom: 1px solid #c4c4c4;
         margin-bottom: 37px;
+
         .wrapper-account__info {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 25px;
+
             .wrapper-label {
                 width: 100%;
                 text-align: left;
                 color: #83868b;
+
                 .textLabel {
                     margin-top: 0;
                     width: 100%;
                 }
+
                 .input-group {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     border-radius: 0.3em;
                     border: 1px solid #ccc;
+
                     svg {
                         margin: 6px 8px;
                     }
-                    .form-control {
-                        width: 0.1px;
-                        height: 0.1px;
-                        background: rgba(255, 255, 255, 0);
-                    }
+
+
                 }
             }
         }
+
         .mr {
             margin-right: 30px;
         }
     }
+
+
+
     .wrapper-account__blank {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         width: 40%;
+
         .wrapper-input {
             .mt {
                 margin-top: 10px;
             }
         }
+
         .wrapper-input {
             margin: 0;
             width: 100%;
@@ -634,6 +686,72 @@ li {
     }
 }
 
+.form-control {
+    width: 0.1px;
+    height: 0.1px;
+    background: rgba(255, 255, 255, 0);
+}
+
 .wrapper-account__btn {
     margin-top: 41px;
+}
+
+.wrapper-product {
+    .wrapper-product__table {
+        width: 100%;
+        border: 1px solid #c4c4c4;
+        border-collapse: collapse;
+
+        .wrapper-product__line {
+            border-bottom: 1px solid #C4C4C4;
+
+
+            .title-table {
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .text-table {
+                font-weight: normal;
+            }
+        }
+
+        .stats-modeartion {
+            background: #FFF0A3;
+            padding: 5px 5px;
+            border-radius: 0.5em;
+        }
+
+        .stats-verify {
+            background: #CCEEB7;
+            padding: 3px 5px;
+            border-radius: 0.5em;
+        }
+
+        .rejected {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .wrapper-product__column {
+            border-right: 1px solid #c4c4c4;
+            text-align: center;
+        }
+
+        .wrapper-product__null {
+            width: 4%;
+            height: 3em;
+
+            .checkbox {
+                width: 100%;
+                text-align: center;
+                margin: auto 0;
+
+                .custom-checkbox>span::before {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
