@@ -42,7 +42,7 @@
             fill="#4094D0"
           />
         </svg>
-        <!-- {{ file }} -->
+        {{ file }}
         <input
           @change="addFile"
           id="inputPhotoTable"
@@ -55,18 +55,18 @@
       ????
     </td>
     <td class="wrapper-product__column text-table wrapper-product__price">
-      50 000 Р
+      50 000 ₽
     </td>
     <td class="wrapper-product__column text-table wrapper-product__desc">
       Текст описания
     </td>
     <td class="wrapper-product__column text-table wrapper-product__time">
-      05.04.2022 10:24
+      {{ dateTable }}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__stats">
-      <!-- <p v-if="massLine.StatsModeration" class="stats-modeartion">На модерации</p>
-      <p v-if="massLine.StatsVerify" class="stats-verify">Одобрено</p>
-      <div v-if="massLine.Statsreject" class="rejected">
+      <p v-if="StatsModeration" class="stats-modeartion">На модерации</p>
+      <p v-if="StatsVerify" class="stats-verify">Одобрено</p>
+      <div v-if="Statsreject" class="rejected">
         <svg
           width="22"
           height="22"
@@ -80,7 +80,7 @@
           />
         </svg>
         Отклонено
-      </div> -->
+      </div>
     </td>
     <td class="wrapper-product__column text-table wrapper-product__photo">
       Фото
@@ -105,10 +105,26 @@
 <script>
 export default {
   props: {
-    // massLine: {
-    //   type: Array,
-    //   required: true,
-    // },
+    massLine: {
+      type: Object,
+      required: true,
+    },
+    StatsModeration: {
+      type: Boolean,
+      default: false,
+    },
+    StatsVerify: {
+      type: Boolean,
+      default: false,
+    },
+    Statsreject: {
+      type: Boolean,
+      default: false,
+    },
+    dateTable: {
+      type: String,
+      default: "Не определенно"
+    }
   },
   data() {
     return {
