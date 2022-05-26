@@ -11,22 +11,22 @@
       </div>
     </td>
     <td class="wrapper-product__column text-table wrapper-product__name">
-      Генрих 8
+      {{massLine.name}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__category">
-      Для спальни
+     {{massLine.caregoty}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__type">
-      Кресло
+     {{massLine.type}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__width">
-      65 см
+     {{massLine.width}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__length">
-      80 см
+      {{massLine.length}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__height">
-      80 см
+     {{massLine.height}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__file-3D">
       <label for="inputPhotoTable" class="input-group">
@@ -55,13 +55,13 @@
       ????
     </td>
     <td class="wrapper-product__column text-table wrapper-product__price">
-      50 000 ₽
+      {{massLine.price}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__desc">
-      Текст описания
+      {{massLine.description}}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__time">
-      {{ dateTable }}
+      {{ massLine.time }}
     </td>
     <td class="wrapper-product__column text-table wrapper-product__stats">
       <p v-if="StatsModeration" class="stats-modeartion">На модерации</p>

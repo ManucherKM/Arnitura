@@ -87,7 +87,7 @@
       </tbody>
     </table>
 
-    <AddTable />
+    <AddTable @newObj="newObj" />
   </div>
 </template>
 
@@ -101,27 +101,31 @@ export default {
     return {
       massLine: [
         {
-          name: "Генрих 8",
-          caregoty: "Для спальни",
-          width: "Кресло",
-          length: 65,
-          height: 80,
-          articl: 80,
-          file3D: "уавфкиме.ew",
+          name: "Ivan",
+          caregoty: "one",
+          width: 120,
+          length: 123,
+          height: 123,
           material: {
             Кожа: "Кожа",
             Вельвет: "Вельвет",
           },
-          price: "Генрих 8",
-          description: "Описание",
+          price: 123,
+          description: "Пример",
+          time: "Дата",
           statsModeration: true,
           statsVerify: false,
           statsreject: false,
-          Photo: "Фото",
           dateTable: `${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}`,
         },
       ],
     };
+  },
+  methods: {
+    newObj(obj) {
+      console.log(this.massLine);
+      this.massLine.push(obj);
+    },
   },
 };
 </script> 
