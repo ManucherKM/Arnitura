@@ -120,6 +120,9 @@
     <div class="video-block">
       <div class="container">
         <div class="viedeo-block__wrapper-flex">
+          <p class="video-block__text title d-block">
+            Приложение для покупки мебели, которое изменит будущее бизнеса...
+          </p>
           <p class="video-block__text title">Приложение для покупки мебели,</p>
           <img
             src="../assets/img/ThreeBlock/Phone-next-video.png"
@@ -130,14 +133,27 @@
           <p class="video-block__text title">
             которое изменит будущее бизнеса...
           </p>
+          <div class="download__wrapper-store">
+            <a href="#"
+              ><img
+                src="../assets/img/mobile/appStore.png"
+                alt="Google Play"
+                class="download__google-play"
+            /></a>
+            <a href="#"
+              ><img
+                src="../assets/img/mobile/google.png"
+                alt="App Store"
+                class="download__app-store"
+            /></a>
+          </div>
         </div>
       </div>
     </div>
 
-    <section class="partner">
+    <section class="partner container">
       <h3 class="partner__title title">
-        Стань партнером и продавай больше <br />
-        совместно с ARNITURA уже через 7 дней
+        Стань партнером и продавай больше совместно с ARNITURA уже через 7 дней
       </h3>
       <div class="partner-items">
         <div class="partner-item">
@@ -179,6 +195,69 @@
       <img src="../assets/img/road-map.png" alt="" class="road-map__img" />
       <button class="btn">СТАТЬ ПАРТНЕРОМ</button>
     </section>
+    <div class="mobile-map d-none">
+      <h2 class="title">Для сотрудничества</h2>
+      <div class="mobile-map__item">
+        <img
+          src="../assets/img/mobile/map/friend.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+        <p class="text">Зарегестрироваться<br />в качестве партнера</p>
+        <img
+          src="../assets/img/mobile/map/arrow.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+      </div>
+      <div class="mobile-map__item">
+        <img
+          src="../assets/img/mobile/map/cloud.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+        <p class="text">
+          Загрузить информацию о своих<br />товарах на сайт ARNITURA
+        </p>
+        <img
+          src="../assets/img/mobile/map/arrow.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+      </div>
+      <div class="mobile-map__item">
+        <img
+          src="../assets/img/mobile/map/site.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+        <p class="text">
+          Разместить информацию <br />о приложении ARNITURA <br />в шоуруме и на
+          сайте
+        </p>
+        <img
+          src="../assets/img/mobile/map/arrow.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+      </div>
+      <div class="mobile-map__item">
+        <img
+          src="../assets/img/mobile/map/phone.svg"
+          alt="Photo"
+          class="mobile-map__img"
+        />
+        <p class="text">
+          Предлагать покупателям скачат<br />
+          приложение ARNITURA <br />и смотреть товары в AR
+        </p>
+      </div>
+      <div class="mobile-card__wrapper-btn">
+        <nuxt-link to="#" class="mobile-map__btn btn"
+          >Стать партнером</nuxt-link
+        >
+      </div>
+    </div>
     <section class="about">
       <h3 class="about__title title">О компании</h3>
       <div class="about-content">

@@ -2,7 +2,7 @@
   <div class="wrapper-form">
     <h2 class="wrapper-form__title">Добавить товар</h2>
     <div class="wrapper-form__form">
-      <div class="wrapper-form__container">
+      <form class="wrapper-form__container" name="newProduct">
         <div class="wrapper-form__wrapper-info">
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Наименование</p>
@@ -91,7 +91,11 @@
         <div class="wrapper-form__wrapper-file">
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Фото</p>
-            <label for="Photoinpt" class="label-input-file">
+            <label
+              for="Photoinpt"
+              class="label-input-file"
+              :class="{ 'drag-drop': dragDropOne }"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -108,6 +112,8 @@
               </svg>
               <p v-if="this.file !== null" class="textinput">Файл выбран</p>
               <input
+                @dragenter="classBgOne"
+                @dragleave="classBgOne"
                 @change="addFile"
                 id="Photoinpt"
                 type="file"
@@ -117,7 +123,11 @@
           </div>
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Файл 3D модели</p>
-            <label for="File3D" class="label-input-file">
+            <label
+              for="File3D"
+              class="label-input-file"
+              :class="{ 'drag-drop': dragDropTwo }"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -138,6 +148,8 @@
               </svg>
               <p v-if="this.file3D !== null" class="textinput">Файл выбран</p>
               <input
+                @dragenter="classBgTwo"
+                @dragleave="classBgTwo"
                 @change="addFile3D"
                 id="File3D"
                 type="file"
@@ -146,9 +158,9 @@
               />
             </label>
           </div>
-          <button @click="createObj" class="btn">Отправить</button>
+          <button @click.prevent="createObj" class="btn">Отправить</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>
@@ -175,6 +187,8 @@ export default {
         name: "Фото",
       },
       file3D: null,
+      dragDropOne: false,
+      dragDropTwo: false,
     };
   },
   methods: {
@@ -205,6 +219,12 @@ export default {
         dateTable: `${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()} ${new Date().getHours()}:${new Date().getMinutes()}`,
       };
       this.$emit("newObj", obj);
+    },
+    classBgOne() {
+      this.dragDropOne = !this.dragDropOne;
+    },
+    classBgTwo() {
+      this.dragDropTwo = !this.dragDropTwo;
     },
   },
 };
