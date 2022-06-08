@@ -2,7 +2,7 @@
   <div class="wrapper-sing-in wrapper-res">
     <div class="wrapper-res__center">
       <h3 class="wrapper-res__title title">Авторизация</h3>
-      <form name="PageRegestration" action="">
+      <form id="Reg" name="PageRegestration" action="#">
         <div class="wrapper-res__inputs">
           <InputReg
             v-for="item of massListinput"
