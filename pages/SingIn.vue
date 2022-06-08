@@ -2,7 +2,7 @@
   <div class="wrapper-sing-in wrapper-res">
     <div class="wrapper-res__center">
       <h3 class="wrapper-res__title title">Авторизация</h3>
-      <form action="">
+      <form name="PageRegestration" action="">
         <div class="wrapper-res__inputs">
           <InputReg
             v-for="item of massListinput"
@@ -13,6 +13,7 @@
             @newValueInput="createObj"
             :deletValInput="deletValInput"
             :errorValidate="errorValidate"
+            :textName="item.textName"
           />
         </div>
         <div class="checkbox">
@@ -53,8 +54,13 @@ export default {
   data() {
     return {
       massListinput: [
-        { text: "ИНН", type: "text", eye: false },
-        { text: "Пароль", type: "password", eye: true },
+        { text: "ИНН", type: "text", eye: false, textName: "AuthoInn" },
+        {
+          text: "Пароль",
+          type: "password",
+          eye: true,
+          textName: "AuthoPassword",
+        },
       ],
       massBdSingIn: [],
       objInn: {},

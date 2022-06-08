@@ -2,7 +2,7 @@
   <div class="wrapper-sing-up wrapper-res">
     <div class="wrapper-res__center">
       <h3 class="wrapper-res__title title">Регистрация</h3>
-      <form action="">
+      <form name="PageAuthorizate" action="">
         <div class="wrapper-res__inputs">
           <InputReg
             v-for="item of massListinput"
@@ -13,6 +13,7 @@
             @newValueInput="createObj"
             :deletValInput="deletValInput"
             :errorValidate="errorValidate"
+            :textName="item.textName"
           />
         </div>
         <ButtonSite
@@ -39,11 +40,26 @@ export default {
     return {
       //Массив для отрисовки
       massListinput: [
-        { text: "ИНН", type: "text", eye: false },
-        { text: "Наименование организации", type: "text", eye: false },
-        { text: "Адрес", type: "text", eye: false },
-        { text: "Пароль", type: "password", eye: true },
-        { text: "Подтвердите пароль", type: "password", eye: true },
+        { text: "ИНН", type: "text", eye: false, textName: "RegInn" },
+        {
+          text: "Наименование организации",
+          type: "text",
+          eye: false,
+          textName: "RegNameCompany",
+        },
+        { text: "Адрес", type: "text", eye: false, textName: "RegAddress" },
+        {
+          text: "Пароль",
+          type: "password",
+          eye: true,
+          textName: "RegPass",
+        },
+        {
+          text: "Подтвердите пароль",
+          type: "password",
+          eye: true,
+          textName: "RegRepeatPass",
+        },
       ],
       massBdSingUp: [],
       objInn: {},

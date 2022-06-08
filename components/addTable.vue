@@ -10,7 +10,8 @@
               v-model="modelName"
               type="text"
               placeholder="Иван Иванов"
-              class="wrapper-form__input"
+              class="wrapper-form__input" 
+              name="namePeople"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -20,6 +21,7 @@
               type="text"
               placeholder="Для спальни"
               class="wrapper-form__input"
+              name="Category"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -29,6 +31,7 @@
               type="text"
               placeholder="Кресло"
               class="wrapper-form__input"
+              name="Type"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -38,6 +41,7 @@
               type="number"
               placeholder="65"
               class="wrapper-form__input"
+              name="Width"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -47,6 +51,7 @@
               type="number"
               placeholder="80"
               class="wrapper-form__input"
+              name="Length"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -56,6 +61,7 @@
               type="number"
               placeholder="80"
               class="wrapper-form__input"
+              name="Height"
             />
           </div>
 
@@ -66,6 +72,7 @@
               type="text"
               placeholder="Иван Иванов"
               class="wrapper-form__input"
+              name="Material"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -75,6 +82,7 @@
               type="text"
               placeholder="Иван Иванов"
               class="wrapper-form__input"
+              name="Price"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt pb">
@@ -84,6 +92,7 @@
               type="text"
               placeholder="Иван Иванов"
               class="wrapper-form__input"
+              name="Description"
             />
           </div>
         </div>
@@ -119,6 +128,7 @@
                 type="file"
                 placeholder="Иван Иванов"
                 class="wrapper-form__input"
+                name="PhotoProduct"
             /></label>
           </div>
           <div class="wrapper-form__wrapper-inpt">
@@ -155,10 +165,11 @@
                 type="file"
                 placeholder="Иван Иванов"
                 class="wrapper-form__input"
+                name="FileProduct"
               />
             </label>
           </div>
-          <button @click.prevent="createObj" class="btn">Отправить</button>
+          <button type="submit" @click.prevent="createObj" class="btn">Отправить</button>
         </div>
       </form>
     </div>

@@ -9,6 +9,7 @@
           v-model.trim.lazy="valInput"
           class="wrapper-input__input"
           required
+          :name="textName"
           :type="typeInputModel"
           :placeholder="textPlayceholder"
         />
@@ -78,6 +79,10 @@ export default {
       default: false,
     },
     textPlayceholder: {
+      type: String,
+      default: "",
+    },
+    textName: {
       type: String,
       default: "",
     }
