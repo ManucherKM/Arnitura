@@ -2,7 +2,7 @@
   <div class="wrapper-form">
     <h2 class="wrapper-form__title">Добавить товар</h2>
     <div class="wrapper-form__form">
-      <form class="wrapper-form__container" name="newProduct">
+      <form id="newProduct" class="wrapper-form__container" action="#" name="newProduct">
         <div class="wrapper-form__wrapper-info">
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Наименование</p>
