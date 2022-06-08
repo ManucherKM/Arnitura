@@ -2,7 +2,7 @@
   <div class="wrapper-sing-up wrapper-res">
     <div class="wrapper-res__center">
       <h3 class="wrapper-res__title title">Регистрация</h3>
-      <form name="PageAuthorizate" action="">
+      <form id="Auth" name="PageAuthorizate" action="#">
         <div class="wrapper-res__inputs">
           <InputReg
             v-for="item of massListinput"
