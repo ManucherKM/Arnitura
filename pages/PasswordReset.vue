@@ -5,18 +5,21 @@
       <p class="wrapper-res__text text">
         Для сброса пароля ведите адрес электронной почты
       </p>
-      <input
-        @input="createObj"
-        v-model="emailReset"
-        class="wrapper-res__input"
-        type="email"
-        placeholder="Адрес электронной почты"
-      />
-      <ButtonSite
-        class="wrapper-res__btn btn"
-        :textBtn="'Сбросить мой пароль'"
-        @btnClick="Send"
-      />
+      <form id="PageResetPass" name="ResetPass" method="post">
+        <input
+          @input="createObj"
+          v-model="emailReset"
+          class="wrapper-res__input"
+          type="email"
+          placeholder="Адрес электронной почты"
+        />
+        <ButtonSite
+          class="wrapper-res__btn btn"
+          :textBtn="'Сбросить мой пароль'"
+          @btnClick="Send"
+     
+        />
+      </form>
     </div>
   </div>
 </template>
@@ -76,7 +79,7 @@ export default {
       this.massReset.push(this.objRes);
       console.log(this.massReset);
       this.massReset = [];
-      this.emailReset = ""
+      this.emailReset = "";
     },
   },
 };

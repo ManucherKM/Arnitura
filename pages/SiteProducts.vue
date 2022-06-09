@@ -123,8 +123,8 @@ export default {
   },
   methods: {
     newObj(obj) {
-      console.log(this.massLine);
-      this.massLine.push(obj);
+      // console.log(this.massLine);
+      // this.massLine.push(obj);
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <button class="wrapper-res__btn btn" @click.prevent="btnClick">
+  <button type="submit" class="wrapper-res__btn btn" @click="btnClick">
     {{ textBtn }}
   </button>
 </template>

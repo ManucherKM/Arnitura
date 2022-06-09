@@ -2,21 +2,28 @@
   <div class="wrapper-form">
     <h2 class="wrapper-form__title">Добавить товар</h2>
     <div class="wrapper-form__form">
-      <form id="newProduct" class="wrapper-form__container" action="#" name="newProduct">
+      <form
+        id="newProduct"
+        class="wrapper-form__container"
+        name="newProduct"
+        method="post"
+      >
         <div class="wrapper-form__wrapper-info">
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Наименование</p>
             <input
+              required
               v-model="modelName"
               type="text"
               placeholder="Иван Иванов"
-              class="wrapper-form__input" 
+              class="wrapper-form__input"
               name="namePeople"
             />
           </div>
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Категория</p>
             <input
+              required
               v-model="modelCategory"
               type="text"
               placeholder="Для спальни"
@@ -27,6 +34,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Тип</p>
             <input
+              required
               v-model="modelType"
               type="text"
               placeholder="Кресло"
@@ -37,6 +45,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Ширина</p>
             <input
+              required
               v-model="modelWidth"
               type="number"
               placeholder="65"
@@ -47,6 +56,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Длина</p>
             <input
+              required
               v-model="modelLength"
               type="number"
               placeholder="80"
@@ -57,6 +67,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Высота</p>
             <input
+              required
               v-model="modelHeight"
               type="number"
               placeholder="80"
@@ -68,6 +79,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Материал</p>
             <input
+              required
               v-model="modelMaterial"
               type="text"
               placeholder="Иван Иванов"
@@ -78,6 +90,7 @@
           <div class="wrapper-form__wrapper-inpt">
             <p class="text name">Цена товара</p>
             <input
+              required
               v-model="modelPrice"
               type="text"
               placeholder="Иван Иванов"
@@ -88,6 +101,7 @@
           <div class="wrapper-form__wrapper-inpt pb">
             <p class="text name">Описание</p>
             <input
+              required
               v-model="modelDecription"
               type="text"
               placeholder="Иван Иванов"
@@ -121,6 +135,7 @@
               </svg>
               <p v-if="this.file !== null" class="textinput">Файл выбран</p>
               <input
+                required
                 @dragenter="classBgOne"
                 @dragleave="classBgOne"
                 @change="addFile"
@@ -158,6 +173,7 @@
               </svg>
               <p v-if="this.file3D !== null" class="textinput">Файл выбран</p>
               <input
+                required
                 @dragenter="classBgTwo"
                 @dragleave="classBgTwo"
                 @change="addFile3D"
@@ -169,7 +185,9 @@
               />
             </label>
           </div>
-          <button type="submit" @click.prevent="createObj" class="btn">Отправить</button>
+          <button type="submit" @click="createObj" class="btn">
+            Отправить
+          </button>
         </div>
       </form>
     </div>

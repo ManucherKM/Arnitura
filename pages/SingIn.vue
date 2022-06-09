@@ -2,7 +2,7 @@
   <div class="wrapper-sing-in wrapper-res">
     <div class="wrapper-res__center">
       <h3 class="wrapper-res__title title">Авторизация</h3>
-      <form id="Reg" name="PageRegestration" action="#">
+      <form id="Reg" name="PageRegestration" method="post">
         <div class="wrapper-res__inputs">
           <InputReg
             v-for="item of massListinput"
@@ -25,7 +25,7 @@
         <div class="wrapper-sing-in__btns">
           <ButtonSite
             @btnClick="Send"
-            type="submit"
+
             class="wrapper-res__btn btn btn-one"
             :textBtn="'Войти'"
           />

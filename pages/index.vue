@@ -193,7 +193,7 @@
     <section class="road-map">
       <h3 class="road-map__title title">Для сотрудничества</h3>
       <img src="../assets/img/road-map.png" alt="" class="road-map__img" />
-      <button class="btn">СТАТЬ ПАРТНЕРОМ</button>
+      <button @click="$router.push('/SingUp')" class="btn">СТАТЬ ПАРТНЕРОМ</button>
     </section>
     <div class="mobile-map d-none">
       <h2 class="title">Для сотрудничества</h2>
@@ -253,7 +253,7 @@
         </p>
       </div>
       <div class="mobile-card__wrapper-btn">
-        <nuxt-link to="#" class="mobile-map__btn btn"
+        <nuxt-link to="/SingUp" class="mobile-map__btn btn"
           >Стать партнером</nuxt-link
         >
       </div>

@@ -763,6 +763,11 @@ li {
         text-align: center;
         font-size: 20px;
     }
+    .wrapper-form__subtitle {
+        color: green;
+        text-align: center;
+        font-size: 20px;
+    }
     .wrapper-form__form {
         background: rgb(255, 255, 255);
         border: 1px solid #ccc;
@@ -870,7 +875,8 @@ li {
 .d-none {
     display: none;
 }
-@media (max-width: 360px) {
+
+@media (max-width: 420px) {
     .container {
         padding: 0 24px;
     }
